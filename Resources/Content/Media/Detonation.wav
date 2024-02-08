@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene>
+	<SceneObject name="Template">
+		<Import filename="view-foundations/scenes/templates/template_fullscreen.xml" />
+		<PortConnection id="{e4428d74-12a2-4124-b070-1c84aa5fd0db}" isSource="false" port="NotificationType" />
+		<PortConnection id="{cafd4a10-e52b-45c3-97f8-13c65bb96bb3}" isSource="false" port="NotificationTimeToShow" />
+		<PortConnection id="{913598c2-f51b-40f0-abfa-947188d41909}" isSource="false" port="NotificationButtonFunctional" />
+		<PortConnection id="{a212c92e-95c4-4b79-84a2-5d16fbfc7198}" isSource="false" port="ShowNotification" />
+		<PortConnection id="{9a98d1ba-6626-4b94-bfc1-54b86eccfd68}" isSource="false" port="NotificationMessage" />
+		<PortConnection id="{16eb2ef8-5013-4c2a-96af-c9bcb8b5ad10}" isSource="false" port="HideBackButton" />
+		<PortConnection id="{16eb2ef8-5013-4c2a-96af-c9bcb8b5ad10}" isSource="true" port="OnOpen" />
+		<PortConnection id="{b87a8648-7287-4c6d-830a-29c3dd6cb3f5}" isSource="false" port="ShowCloseButton" />
+		<PortConnection id="{b87a8648-7287-4c6d-830a-29c3dd6cb3f5}" isSource="true" port="OnOpen" />
+		<PortConnection id="{e57de25c-2658-4ffb-98d0-3a77945f6d4e}" isSource="true" port="OnOpen" />
+		<PortConnection id="{99f1285f-9fb1-45b7-b4b8-9bfb15ebf50a}" isSource="true" port="OnOpen" />
+		<PortConnection id="{7996b4de-ef63-423d-9ffb-339a20f5f1b4}" isSource="true" port="OnOpen" />
+		<PortConnection id="{d424409d-adc9-417c-a92d-bf7d25f79132}" isSource="true" port="OnBackButtonPressed" />
+		<PortConnection id="{7927b126-4a63-4c6a-b74b-2143ab074fc4}" isSource="true" port="OnCoreUserIdShown" />
+		<PortConnection id="{e7136457-0b3a-4734-b39b-f427d0270f7b}" isSource="true" port="OnCloseButtonPressed" />
+		<PortConnection id="{739cab14-df43-4411-ae63-c9c84902005c}" isSource="true" port="OnGainFocus" />
+		<PortConnection id="{516c851d-494c-48a4-9eee-d0385f6d4427}" isSource="true" port="OnOpen" />
+		<PortConnection id="{2900c264-4521-4f39-af64-e09016e20bf0}" isSource="false" port="ShowBackgroundOverlay" />
+		<PortConnection id="{d5f66418-0599-4191-b657-3eb3515dd836}" isSource="false" port="EnableInput" />
+		<PortConnection id="{608afa58-c820-4a03-8059-47aa62f9ff5a}" isSource="false" port="EnableInput" />
+		<PortConnection id="{c4a64c41-ed32-46b3-a989-a8e832e01aa3}" isSource="false" port="ShowNotification" />
+		<PortConnection id="{256997bf-e061-4913-be94-80710f358070}" isSource="false" port="NotificationType" />
+		<PortConnection id="{502149f6-968e-44b2-9676-0a07b3a3681e}" isSource="false" port="NotificationTimeToShow" />
+		<PortConnection id="{304a7b50-7f5c-4ed1-b8bd-8081730b6d8a}" isSource="false" port="EnableInput" />
+		<PortConnection id="{efe0ce90-d894-4145-a5b4-0274fc6a8b0b}" isSource="false" port="DisableInput" />
+		<PortConnection id="{d20fde11-c930-4437-bd57-c1a91b540ff0}" isSource="false" port="DisableInput" />
+		<PortConnection id="{65861007-4e64-4f11-ab79-4d617d6ebe9a}" isSource="false" port="NotificationMessage" />
+		<PortConnection id="{3db022b3-a14f-4026-a5bc-b4991a864a44}" isSource="false" port="DisableInput" />
+		<SceneObject name="ContentAdoptee">
+			<EntityAdoptee adopterUniqueSceneId="Content" />
+			<SceneObject name="Canvas">
+				<Sprite filename="view-foundations/tex/royal_white.png" mode="sprite" vertexColors="false">
+					<Size width="750" height="1226" />
+					<Pivot anchor="top" />
+				</Sprite>
+				<Material version="0.0">
+					<Shader program="KingBrandoTextureColor" />
+					<Depth enabled="true" writeMask="false" />
+					<Blend enabled="true" />
+				</Material>
+				<Translation x="380" y="108" z="2" />
+				<SceneObject name="Description" visibility="inherit">
+					<Rotation x="0" y="0" z="0" />
+					<Scale x="1" y="1" z="1" />
+					<Text alignment="center" allowWordWrapping="true" canBreakWords="true" key="textlabel-description-accountsetting-siwa" maxHeight="101" maxWidth="654" overflowBehaviour="fit" style="Body_Large_C" verticalAlignment="visualCenter">
+						<TextString>Your game will now be saved so you can continue playing on any device.</TextString>
+					</Text>
+					<Translation x="0" y="160" z="0" />
+					<GUILogicLua logic="if OpenedFromLanding then
+	StringKey = &quot;textlabel-description-accountcreated-siwa&quot;
+else
+	StringKey = &quot;textlabel-description-accountsetting-siwa&quot;
+end" version="0.0">
+						<Ports>
+							<Output name="StringKey" type="string" />
+							<Input name="OpenedFromLanding" />
+						</Ports>
+					</GUILogicLua>
+					<LocalizedText stringKey="" version="0.0" />
+					<PortConnection id="{9d31cf95-14a3-4b47-8b38-8b3dddc7f19d}" isSource="true" port="StringKey" />
+					<PortConnection id="{9d31cf95-14a3-4b47-8b38-8b3dddc7f19d}" isSource="false" port="LocalizedText:InputKey" />
+					<PortConnection id="{d4d1fe46-1e8d-4b14-a6b1-a1528358f890}" isSource="true" port="LocalizedText:OutputString" />
+					<PortConnection id="{d4d1fe46-1e8d-4b14-a6b1-a1528358f890}" isSource="false" port="GUILabel:SetText" />
+					<PortConnection id="{6e11ac09-cbd5-461e-8841-5e3adc645daa}" isSource="false" port="OpenedFromLanding" />
+					<GUILabel version="0.0" />
+				</SceneObject>
+				<SceneObject name="Title">
+					<GUILabel />
+					<LocalizedText stringKey="title-welcome" version="0.0">
+						<Ports>
+							<Input name="TitleWelcome:Name" text="USER_MISSING" type="string" />
+						</Ports>
+					</LocalizedText>
+					<PortConnection id="{9d16aab8-9ee9-4b50-b68b-8dffbeec44a4}" isSource="true" port="LocalizedText:OutputString" />
+					<PortConnection id="{9d16aab8-9ee9-4b50-b68b-8dffbeec44a4}" isSource="false" port="GUILabel:SetText" />
+					<PortConnection id="{dba2f3e3-9403-4c04-ac13-50464b2916ad}" isSource="false" port="TitleWelcome:Name" />
+					<PortConnection id="{c6df9854-22cb-4575-b6f0-9ee43c4bb6f8}" isSource="true" port="StringKey" />
+					<PortConnection id="{c6df9854-22cb-4575-b6f0-9ee43c4bb6f8}" isSource="false" port="LocalizedText:InputKey" />
+					<PortConnection id="{487534a9-d63a-41f7-a119-eac829f4164c}" isSource="false" port="OpenedFromLanding" />
+					<Rotation x="0" y="0" z="0" />
+					<Scale x="1" y="1" z="1" />
+					<Text allowWordWrapping="false" canBreakWords="false" key="title-accountsettings" maxHeight="64" maxWidth="654" overflowBehaviour="fit" style="Title_C" verticalAlignment="visualCenter">
+						<TextString>Welcome, USER</TextString>
+					</Text>
+					<Translation y="65" />
+					<GUILogicLua logic="if OpenedFromLanding then
+	StringKey = &quot;title-welcome&quot;
+else
+	StringKey = &quot;title-accountsettings&quot;
+end" version="0.0">
+						<Ports>
+							<Output name="StringKey" type="string" />
+							<Input name="OpenedFromLanding" />
+						</Ports>
+					</GUILogicLua>
+				</SceneObject>
+				<SceneObject name="Avatar">
+					<Import filename="view-foundations/scenes/templates/template_avatar.xml" version="0.0" />
+					<PortConnection id="{7244f14c-8f4f-4492-bc10-d72a5bf38cee}" isSource="false" port="Path" />
+					<PortConnection id="{e57de25c-2658-4ffb-98d0-3a77945f6d4e}" isSource="false" port="OnAvatarDownloadRequested" />
+					<Rotation x="0" y="0" z="0" />
+					<Scale x="1" y="1" z="1" />
+					<Translation y="412" />
+				</SceneObject>
+				<SceneObject name="AvatarUploadButton">
+					<Animation animationData="ViewFoundations_PrimaryButtonDown" name="ButtonDown" loopCount="0" />
+					<Animation animationData="ViewFoundations_PrimaryButtonOnDown" loopCount="0" name="ButtonOnDown" />
+					<Animation animationData="ViewFoundations_PrimaryButtonOnUp" loopCount="0" name="ButtonOnUp" />
+					<Animation animationData="ViewFoundations_PrimaryButtonResetState" name="ButtonResetState" loopCount="0" />
+					<Animation animationData="ViewFoundations_PrimaryButtonDisabled" name="ButtonDisabled" loopCount="0" />
+					<GUIButton>
+						<Transitions>
+							<Disabled animationName="ButtonDisabled" />
+							<Down animationName="ButtonDown" />
+							<OnDown animationName="ButtonOnDown" />
+							<OnUp animationName="ButtonOnUp" />
+							<Up animationName="ButtonResetState" />
+						</Transitions>
+					</GUIButton>
+					<PortConnection id="{dc9469f7-c6d1-42f9-ab10-5f8279b0e00e}" isSource="true" port="OnButtonPressed" />
+					<PortConnection id="{c67f0d8f-745e-4cd3-8924-aee50489e879}" isSource="true" port="GUIButton:OnButtonPressed" />
+					<PortConnection id="{c67f0d8f-745e-4cd3-8924-aee50489e879}" isSource="false" port="ButtonPress" />
+					<PortConnection id="{49d46fdd-f1fc-440b-b61e-91e2f38b30b2}" isSource="true" port="UniqueIdValue" />
+					<PortConnection id="{36c5625c-34be-41c5-930f-29b467fbe602}" isSource="true" port="OnButtonPressed" />
+					<Rotation x="0" y="0" z="0" />
+					<Scale x="1" y="1" z="1" />
+					<Sprite vertexColors="false" mode="sprite">
+						<Pivot anchor="center" />
+						<Size height="116" width="120" />
+					</Sprite>
+					<Material version="0.0">
+						<Shader program="KingBrandoTextureColor" />
+						<Blend enabled="true" />
+						<Color r="87" g="201" b="164" a="255" />
+						<Depth enabled="true" writeMask="false" />
+						<Texture filename="view-foundations/tex/button_primary.png" />
+					</Material>
+					<Translation x="144" y="554" z="1" />
+					<GUILogicLua logic="if ButtonPress_triggered then
+	OnButtonPressed = true
+	UniqueIdValue = UniqueId
+end" version="0.0">
+						<Ports>
+							<Input name="UniqueId" type="string" trigger="false" initialValue="KingAccountAvatarUploadButton" />
+							<Input name="ButtonPress" type="trigger" />
+							<Output name="UniqueIdValue" type="string" />
+							<Output name="OnButtonPressed" type="trigger" />
+						</Ports>
+					</GUILogicLua>
+					<SceneObject name="SpinnerRotator" visibility="never">
+						<Animation animationData="ViewFoundations_SpinnerRotatorIdle" name="Visible" />
+						<Animation animationData="ViewFoundations_SpinnerRotatorShow" layer="1" loopCount="0" name="OnAppear" />
+						<GUIVisibilityController />
+						<Rotation x="0" y="0" z="0" />
+						<Scale x="1" y="1" z="1" />
+						<Sprite filename="view-foundations/tex/spinner_rotator.png" mode="sprite" vertexColors="true">
+							<Pivot anchor="center" />
+						</Sprite>
+						<Material version="0.0">
+							<Shader program="KingBrandoTextureColor" />
+							<Depth enabled="true" writeMask="false" />
+							<Blend enabled="true" />
+						</Material>
+						<Translation y="-10" z="0" />
+						<PortConnection id="{db0eaf3a-ef85-46d9-975c-927ae5be9b22}" isSource="false" port="GUIVisibilityController:Hide" />
+						<PortConnection id="{12a65f4b-70e0-4d20-bac0-ac0ed82c044a}" isSource="false" port="GUIVisibilityController:Hide" />
+						<PortConnection id="{a5df4a66-8e72-458b-9637-57a6fec7253c}" isSource="false" port="GUIVisibilityController:Show" />
+					</SceneObject>
+					<SceneObject name="Camera">
+						<Rotation x="0" z="0" />
+						<Scale x="1" y="1" z="1" />
+						<Sprite mode="sprite" vertexColors="false">
+							<Pivot anchor="center" />
+							<VertexColor a="255" b="255" g="255" r="255" />
+						</Sprite>
+						<Translation y="-10" z="0" />
+						<GUIVisibilityController />
+						<PortConnection id="{e94a9346-0f90-4ab5-a6db-0f63bbf4bbe7}" isSource="false" port="GUIVisibilityController:Show" />
+						<PortConnection id="{10339c1d-108d-49f4-9441-2a221084a3d6}" isSource="false" port="GUIVisibilityController:Show" />
+						<PortConnection id="{572d0e98-eee7-4c33-8b02-5d38fd111ee2}" isSource="false" port="GUIVisibilityController:Hide" />
+						<Material version="0.0">
+							<Shader program="KingBrandoTextureColor" />
+							<Texture filename="king-account-views/tex/camera_icon.png" />
+							<Blend enabled="true" />
+							<Depth enabled="true" writeMask="false" />
+						</Material>
+					</SceneObject>
+				</SceneObject>
+				<SceneObject name="UserNameLabel">
+					<Rotation x="0" y="0" z="0" />
+					<Scale x="1" y="1" z="1" />
+					<Text allowWordWrapping="false" canBreakWords="false" maxHeight="60" maxWidth="654" overflowBehaviour="fit" style="Title_Alt_C" verticalAlignment="visualCenter">
+						<TextString>User Name</TextString>
+						<Shadow enabled="false">
+							<Offset y="2" />
+						</Shadow>
+					</Text>
+					<Translation x="0" y="650" z="0" />
+					<GUILabel />
+					<PortConnection id="{f72696fa-b683-4017-8b12-a620beecb6d7}" isSource="false" port="GUILabel:SetText" />
+				</SceneObject>
+				<SceneObject name="PermissionCenterButton">
+					<GUIButton>
+						<Transitions>
+							<Disabled animationName="" />
+							<Down animationName="" />
+							<OnDown animationName="" />
+							<OnUp animationName="" />
+							<Up animationName="" />
+						</Transitions>
+					</GUIButton>
+					<PortConnection id="{69a06ad5-6c79-40cd-a159-9bb84b3b3db6}" isSource="true" port="GUIButton:OnButtonPressed" />
+					<PortConnection id="{3db022b3-a14f-4026-a5bc-b4991a864a44}" isSource="true" port="GUIButton:OnButtonPressed" />
+					<PortConnection id="{717f7eae-0c24-41b6-8d66-4ed450af67bf}" isSource="true" port="GUIButton:OnButtonPressed" />
+					<Rotation x="0" y="0" z="0" />
+					<Scale x="1" y="1" z="1" />
+					<Sprite filename="view-foundations/tex/royal_white.png" mode="panel" vertexColors="false">
+						<Insets bottom="50" left="54" right="54" top="50" />
+						<Pivot anchor="top" />
+						<Size height="128" width="750" />
+					</Sprite>
+					<Translation x="0" y="972" z="0" />
+					<SceneObject name="PermissionCenterLabel">
+						<Rotation x="0" y="0" z="0" />
+						<Scale x="1" y="1" z="1" />
+						<Text alignment="left" key="title-permissioncenter" maxHeight="84" maxWidth="660" overflowBehaviour="fit" style="Body_Large_L" verticalAlignment="visualCenter">
+							<TextString>Change password</TextString>
+						</Text>
+						<Translation x="-343" y="63" z="0" />
+					</SceneObject>
+					<SceneObject editorEntityId="65931" name="PermissionCenterArrow">
+						<Animation animationData="ViewFoundations_ButtonDown_VertexColor" loopCount="0" name="ButtonDown" />
+						<Animation animationData="ViewFoundations_ButtonOnDown_VertexColor" loopCount="0" name="ButtonOnDown" />
+						<Animation animationData="ViewFoundations_ButtonOnUp_VertexColor" loopCount="0" name="ButtonOnUp" />
+						<Animation animationData="ViewFoundations_ButtonResetState_VertexColor" loopCount="0" name="ButtonResetState" />
+						<Animation animationData="ViewFoundations_FadeIn_VertexColor" layer="1" loopCount="0" name="FadeIn" />
+						<Animation animationData="ViewFoundations_FadeOut_VertexColor" layer="1" loopCount="0" name="FadeOut" />
+						<Animation animationData="ViewFoundations_FadeIn_VertexColor" layer="1" loopCount="0" name="FadeIn" />
+						<Animation animationData="ViewFoundations_FadeOut_VertexColor" layer="1" loopCount="0" name="FadeOut" />
+						<Material version="0.0">
+							<Shader program="KingBrandoTextureColor" />
+							<Blend enabled="true" />
+							<Depth enabled="true" writeMask="false" />
+							<Texture filename="king-account-views/tex/next_icon.png" />
+						</Material>
+						<Rotation x="0" y="0" z="0" />
+						<Scale z="1" />
+						<Sprite mode="sprite" vertexColors="true">
+							<Pivot anchor="center" />
+							<Size height="26" width="20" />
+							<VertexColor a="255" b="125" g="182" r="0" />
+						</Sprite>
+						<Translation x="335" y="68" z="1" />
+					</SceneObject>
+				</SceneObject>
+				<SceneObject name="LogoutButton">
+					<GUIButton>
+						<Transitions>
+							<Disabled animationName="" />
+							<Down animationName="" />
+							<OnDown animationName="" />
+							<OnUp animationName="" />
+							<Up animationName="" />
+						</Transitions>
+					</GUIButton>
+					<PortConnection id="{495178d7-9f09-4bd9-b57f-ebe1313d1766}" isSource="true" port="GUIButton:OnButtonPressed" />
+					<PortConnection id="{5010e575-b19d-4682-be79-e5ba21dea4d6}" isSource="true" port="GUIButton:OnButtonPressed" />
+					<PortConnection id="{efe0ce90-d894-4145-a5b4-0274fc6a8b0b}" isSource="true" port="GUIButton:OnButtonPressed" />
+					<Rotation x="0" y="0" z="0" />
+					<Scale x="1" y="1" z="1" />
+					<Sprite filename="view-foundations/tex/royal_white.png" mode="panel" vertexColors="false">
+						<Insets bottom="50" left="54" right="54" top="50" />
+						<Pivot anchor="top" />
+						<Size height="128" width="750" />
+					</Sprite>
+					<Material version="0.0">
+						<Shader program="KingBrandoTextureColor" />
+						<Depth enabled="true" writeMask="false" />
+						<Blend enabled="true" />
+					</Material>
+					<Translation y="1098" z="0" />
+					<SceneObject name="LogoutLabel">
+						<Rotation x="0" y="0" z="0" />
+						<Scale x="1" y="1" z="1" />
+						<Text alignment="left" maxHeight="84" maxWidth="660" overflowBehaviour="fit" style="Body_Large_L" verticalAlignment="visualCenter" key="link-logout">
+							<TextString>Logout</TextString>
+						</Text>
+						<Translation x="-343" y="63" z="0" />
+					</SceneObject>
+					<SceneObject editorEntityId="65931" name="LogoutArrow">
+						<Animation animationData="ViewFoundations_ButtonDown_VertexColor" loopCount="0" name="ButtonDown" />
+						<Animation animationData="ViewFoundations_ButtonOnDown_VertexColor" loopCount="0" name="ButtonOnDown" />
+						<Animation animationData="ViewFoundations_ButtonOnUp_VertexColor" loopCount="0" name="ButtonOnUp" />
+						<Animation animationData="ViewFoundations_ButtonResetState_VertexColor" loopCount="0" name="ButtonResetState" />
+						<Animation animationData="ViewFoundations_FadeIn_VertexColor" layer="1" loopCount="0" name="FadeIn" />
+						<Animation animationData="ViewFoundations_FadeOut_VertexColor" layer="1" loopCount="0" name="FadeOut" />
+						<Animation animationData="ViewFoundations_FadeIn_VertexColor" layer="1" loopCount="0" name="FadeIn" />
+						<Animation animationData="ViewFoundations_FadeOut_VertexColor" layer="1" loopCount="0" name="FadeOut" />
+						<Material version="0.0">
+							<Shader program="KingBrandoTextureColor" />
+							<Blend enabled="true" />
+							<Depth enabled="true" writeMask="false" />
+							<Texture filename="king-account-views/tex/next_icon.png" />
+						</Material>
+						<Rotation x="0" y="0" z="0" />
+						<Scale z="1" />
+						<Sprite mode="sprite" vertexColors="true">
+							<Pivot anchor="center" />
+							<Size height="26" width="20" />
+							<VertexColor a="255" b="125" g="182" r="0" />
+						</Sprite>
+						<Translation x="335" y="68" z="1" />
+					</SceneObject>
+				</SceneObject>
+				<SceneObject editorEntityId="54" name="LineMiddle">
+					<LayoutConfiguration name="Landscape">
+						<Size>
+							<Width percentage="166.666666" />
+						</Size>
+					</LayoutConfiguration>
+					<Rotation x="0" y="0" z="0" />
+					<Scale x="1" y="1" z="1" />
+					<Sprite filename="king-account-views/tex/divider.png" magFilter="nearest" minFilter="nearest" mode="sprite" vertexColors="true">
+						<Pivot anchor="top" />
+						<S
