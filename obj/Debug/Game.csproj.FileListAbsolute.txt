@@ -1,0 +1,45 @@
+C:\Users\Владислав\Desktop\Game\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\Владислав\Desktop\Game\Game\obj\Debug\Game.csproj.SuggestedBindingRedirects.cache
+C:\Users\Владислав\Desktop\Game\Game\obj\Debug\Game.Form1.resources
+C:\Users\Владислав\Desktop\Game\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\Владислав\Desktop\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
+C:\Users\Владислав\Desktop\Game\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\Владислав\Desktop\Game\Game\bin\Debug\Game.exe.config
+C:\Users\Владислав\Desktop\Game\Game\bin\Debug\Game.exe
+C:\Users\Владислав\Desktop\Game\Game\bin\Debug\Game.pdb
+C:\Users\Владислав\Desktop\Game\Game\obj\Debug\Game.exe
+C:\Users\Владислав\Desktop\Game\Game\obj\Debug\Game.pdb
+C:\Users\Владислав\Desktop\ПГУ\КПО\Курсач\DandyTanks (1990)\Game\bin\Debug\Game.exe.config
+C:\Users\Владислав\Desktop\ПГУ\КПО\Курсач\DandyTanks (1990)\Game\bin\Debug\Game.exe
+C:\Users\Владислав\Desktop\ПГУ\КПО\Курсач\DandyTanks (1990)\Game\bin\Debug\Game.pdb
+C:\Users\Владислав\Desktop\ПГУ\КПО\Курсач\DandyTanks (1990)\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\Владислав\Desktop\ПГУ\КПО\Курсач\DandyTanks (1990)\Game\obj\Debug\Game.csproj.SuggestedBindingRedirects.cache
+C:\Users\Владислав\Desktop\ПГУ\КПО\Курсач\DandyTanks (1990)\Game\obj\Debug\Game.Form1.resources
+C:\Users\Владислав\Desktop\ПГУ\КПО\Курсач\DandyTanks (1990)\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\Владислав\Desktop\ПГУ\КПО\Курсач\DandyTanks (1990)\Game\obj\Debug\Game.csproj.GenerateResource.cache
+C:\Users\Владислав\Desktop\ПГУ\КПО\Курсач\DandyTanks (1990)\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\Владислав\Desktop\ПГУ\КПО\Курсач\DandyTanks (1990)\Game\obj\Debug\Game.exe
+C:\Users\Владислав\Desktop\ПГУ\КПО\Курсач\DandyTanks (1990)\Game\obj\Debug\Game.pdb
+C:\Users\Владислав\Desktop\DandyTanks (1990)\Game\bin\Debug\Game.exe.config
+C:\Users\Владислав\Desktop\DandyTanks (1990)\Game\bin\Debug\Game.exe
+C:\Users\Владислав\Desktop\DandyTanks (1990)\Game\bin\Debug\Game.pdb
+C:\Users\Владислав\Desktop\DandyTanks (1990)\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\Владислав\Desktop\DandyTanks (1990)\Game\obj\Debug\Game.csproj.SuggestedBindingRedirects.cache
+C:\Users\Владислав\Desktop\DandyTanks (1990)\Game\obj\Debug\Game.Form1.resources
+C:\Users\Владислав\Desktop\DandyTanks (1990)\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\Владислав\Desktop\DandyTanks (1990)\Game\obj\Debug\Game.csproj.GenerateResource.cache
+C:\Users\Владислав\Desktop\DandyTanks (1990)\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\Владислав\Desktop\DandyTanks (1990)\Game\obj\Debug\Game.exe
+C:\Users\Владислав\Desktop\DandyTanks (1990)\Game\obj\Debug\Game.pdb
+D:\Влад\ПГУ\DendyTanks (1990)\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+D:\Влад\ПГУ\DendyTanks (1990)\Game\obj\Debug\Game.csproj.SuggestedBindingRedirects.cache
+D:\Влад\ПГУ\DendyTanks (1990)\Game\obj\Debug\Game.Form1.resources
+D:\Влад\ПГУ\DendyTanks (1990)\Game\obj\Debug\Game.csproj.GenerateResource.cache
+D:\Влад\ПГУ\DendyTanks (1990)\Game\obj\Debug\Game.exe
+D:\Влад\ПГУ\DendyTanks (1990)\Game\obj\Debug\Game.pdb
+D:\Влад\ПГУ\игры\DendyTanks (1990)\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+D:\Влад\ПГУ\игры\DendyTanks (1990)\Game\obj\Debug\Game.csproj.SuggestedBindingRedirects.cache
+D:\Влад\ПГУ\игры\DendyTanks (1990)\Game\obj\Debug\Game.Form1.resources
+D:\Влад\ПГУ\игры\DendyTanks (1990)\Game\obj\Debug\Game.csproj.GenerateResource.cache
+D:\Влад\ПГУ\игры\DendyTanks (1990)\Game\obj\Debug\Game.exe
+D:\Влад\ПГУ\игры\DendyTanks (1990)\Game\obj\Debug\Game.pdb

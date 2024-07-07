@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D17563E-D575-438F-B06B-C72C40224419}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Game</RootNamespace>
+    <AssemblyName>Game</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Ico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game\AppearanceOfTank.cs" />
+    <Compile Include="Game\CollisionsObjGame.cs" />
+    <Compile Include="Game\DandyTanks.cs" />
+    <Compile Include="Game\Direction.cs" />
+    <Compile Include="Game\Eagle.cs" />
+    <Compile Include="Game\GameOver.cs" />
+    <Compile Include="Game\IAddTankToDictionary.cs" />
+    <Compile Include="Game\ICollision.cs" />
+    <Compile Include="Game\IDraw.cs" />
+    <Compile Include="Game\ImgGameOver.cs" />
+    <Compile Include="Game\Immovable Obj\BrickWall.cs" />
+    <Compile Include="Game\Immovable Obj\ConcreteWall.cs" />
+    <Compile Include="Game\Immovable Obj\Forest.cs" />
+    <Compile Include="Game\Immovable Obj\Ice.cs" />
+    <Compile Include="Game\Immovable Obj\Water.cs" />
+    <Compile Include="Game\InformationAboutLevel.cs" />
+    <Compile Include="Game\InformationAboutLivesPlayer.cs" />
+    <Compile Include="Game\InformationDownloadLevel.cs" />
+    <Compile Include="Game\InformationGame.cs" />
+    <Compile Include="Game\IResponse.cs" />
+    <Compile Include="Game\Keyboard.cs" />
+    <Compile Include="Game\KeyObjGame.cs" />
+    <Compile Include="Game\Level.cs" />
+    <Compile Include="Game\Menu.cs" />
+    <Compile Include="Game\MoweObjGame.cs" />
+    <Compile Include="Game\ObjGame.cs" />
+    <Compile Include="Game\Points.cs" />
+    <Compile Include="Game\ScreenGame.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Game\SettingsGame.cs" />
+    <Compile Include="Game\ShellObj\CollisionShell.cs" />
+    <Compile Include="Game\ShellObj\DetonationShell.cs" />
+    <Compile Include="Game\ShellObj\DetonationShellBig.cs" />
+    <Compile Include="Game\ShellObj\ShellObj.cs" />
+    <Compile Include="Game\SoundGame.cs" />
+    <Compile Include="Game\SoundTankPlayer.cs" />
+    <Compile Include="Game\StateMenu.cs" />
+    <Compile Include="Game\StateOfGame.cs" />
+    <Compile Include="Game\StateOfLevel.cs" />
+    <Compile Include="Game\Tanks\AnimationTank.cs" />
+    <Compile Include="Game\Tanks\ArmoredPersonnelCarrierTankEnemy.cs" />
+    <Compile Include="Game\Tanks\Bronevyk.cs" />
+    <Compile Include="Game\Tanks\CollisionTank.cs" />
+    <Compile Include="Game\Tanks\DrivingTankEnemy.cs" />
+    <Compile Include="Game\Tanks\DrivingTankPlayer.cs" />
+    <Compile Include="Game\Tanks\EnemyTanks.cs" />
+    <Compile Include="Game\Tanks\FireTank.cs" />
+    <Compile Include="Game\Tanks\InformationTank.cs" />
+    <Compile Include="Game\Tanks\MoveTank.cs" />
+    <Compile Include="Game\Tanks\PlainTankEnemy.cs" />
+    <Compile Include="Game\Tanks\RapidFireTank.cs" />
+    <Compile Include="Game\Tanks\SmallTankPlayer.cs" />
+    <Compile Include="Game\Tanks\TankEnemy.cs" />
+    <Compile Include="Game\Tanks\TankPlayer.cs" />
+    <Compile Include="Game\UpdateTankEnemy.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Content\Maps\1" />
+    <None Include="Resources\Content\Maps\10" />
+    <None Include="Resources\Content\Maps\11" />
+    <None Include="Resources\Content\Maps\12" />
+    <None Include="Resources\Content\Maps\13" />
+    <None Include="Resources\Content\Maps\14" />
+    <None Include="Resources\Content\Maps\15" />
+    <None Include="Resources\Content\Maps\16" />
+    <None Include="Resources\Content\Maps\17" />
+    <None Include="Resources\Content\Maps\18" />
+    <None Include="Resources\Content\Maps\19" />
+    <None Include="Resources\Content\Maps\2" />
+    <None Include="Resources\Content\Maps\20" />
+    <None Include="Resources\Content\Maps\21" />
+    <None Include="Resources\Content\Maps\22" />
+    <None Include="Resources\Content\Maps\23" />
+    <None Include="Resources\Content\Maps\24" />
+    <None Include="Resources\Content\Maps\25" />
+    <None Include="Resources\Content\Maps\26" />
+    <None Include="Resources\Content\Maps\27" />
+    <None Include="Resources\Content\Maps\28" />
+    <None Include="Resources\Content\Maps\29" />
+    <None Include="Resources\Content\Maps\3" />
+    <None Include="Resources\Content\Maps\30" />
+    <None Include="Resources\Content\Maps\31" />
+    <None Include="Resources\Content\Maps\32" />
+    <None Include="Resources\Content\Maps\33" />
+    <None Include="Resources\Content\Maps\34" />
+    <None Include="Resources\Content\Maps\35" />
+    <None Include="Resources\Content\Maps\4" />
+    <None Include="Resources\Content\Maps\5" />
+    <None Include="Resources\Content\Maps\6" />
+    <None Include="Resources\Content\Maps\7" />
+    <None Include="Resources\Content\Maps\8" />
+    <None Include="Resources\Content\Maps\9" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Star1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Star2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Star3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Star4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Tank Player\SmallTankPlayerDown_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Tank Player\SmallTankPlayerDown_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Tank Player\SmallTankPlayerLeft_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Tank Player\SmallTankPlayerLeft_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Tank Player\SmallTankPlayerRight_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Tank Player\SmallTankPlayerRight_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Tank Player\SmallTankPlayerUp_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Tank Player\SmallTankPlayerUp_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\RapidFireTank\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\RapidFireTank\Down2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\RapidFireTank\Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\RapidFireTank\Left2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\RapidFireTank\Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\RapidFireTank\Right2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\RapidFireTank\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\RapidFireTank\Up2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\EnemyPlain\EnemyPlainTankDown1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\EnemyPlain\EnemyPlainTankDown2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\EnemyPlain\EnemyPlainTankLeft1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\EnemyPlain\EnemyPlainTankLeft2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\EnemyPlain\EnemyPlainTankRight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\EnemyPlain\EnemyPlainTankRight2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\EnemyPlain\EnemyPlainTankUp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\EnemyPlain\EnemyPlainTankUp2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\Down2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\DownG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\DownG2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\DownY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\DownY2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\Left2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\LeftG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\LeftG2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\LeftY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\LeftY2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\Right2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\RightG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\RightG2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\RightY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\RightY2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\Up2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\UpG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\UpG2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\UpY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\Bronevyk\UpY2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\ArmoredPersonnelCarrier\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\ArmoredPersonnelCarrier\Down2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\ArmoredPersonnelCarrier\Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\ArmoredPersonnelCarrier\Left2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\ArmoredPersonnelCarrier\Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\ArmoredPersonnelCarrier\Right2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\ArmoredPersonnelCarrier\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Tanks\ArmoredPersonnelCarrier\Up2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\1GameOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\BorderHorizontal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\BorderVertical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\Dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\Eagle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\Eagle2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\Game Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\GameOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\InformationTank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\Marker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\PlayingField.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\Stage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Immovable Obj\BrickWall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Immovable Obj\BrickWall1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Immovable Obj\BrickWall2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Immovable Obj\ConcreteWall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Immovable Obj\Forest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Immovable Obj\Ice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Immovable Obj\Water_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Immovable Obj\Water_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Immovable Obj\Water_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Bullets\11Detonation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Bullets\BulletDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Bullets\BulletLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Bullets\BulletRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Bullets\BulletUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Bullets\Detonation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Bullets\Detonation2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Bullets\Detonation3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Bullets\Detonation22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Bullets\Detonation33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Bullets\DetonationBig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Bullets\DetonationBig2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content\Images\Other\Ico.ico" />
+    <None Include="Resources\Content\Images\Other\Ico.png" />
+    <Content Include="Ico.ico" />
+    <Content Include="Resources\Content\Media\Detonation.wav" />
+    <Content Include="Resources\Content\Media\DetonationShellBig.wav" />
+    <Content Include="Resources\Content\Media\Fire.wav" />
+    <Content Include="Resources\Content\Media\GameOver.wav" />
+    <Content Include="Resources\Content\Media\GameStart.wav" />
+    <Content Include="Resources\Content\Media\SoundMove.wav" />
+    <Content Include="Resources\Content\Media\SoundStop.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
